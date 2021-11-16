@@ -6,15 +6,19 @@
 ;; (package-initialize)
 
 ;; multiple-cursors requires cl-lib
-(prelude-require-packages '(elpy jedi cl-lib multiple-cursors))
+(prelude-require-packages '(elpy jedi cl-lib multiple-cursors sphinx-doc))
 (require 'multiple-cursors)
 
-(elpy-enable)  
-(setq elpy-rpc-backend "jedi")  
+(elpy-enable)
+(setq elpy-rpc-backend "jedi")
+(setq elpy-rpc-python-command "python3")
+
+(require 'sphinx-doc)
+(add-hook 'python-mode-hook (lambda () (sphinx-doc-mode t)))
 
 ;; Standard Jedi.el setting
 ;; (add-hook 'python-mode-hook 'jedi:setup)
-;; (setq jedi:complete-on-dot t)     
+;; (setq jedi:complete-on-dot t)
 
 ;; Type:
 ;;     M-x package-install RET jedi RET
