@@ -32,3 +32,12 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+;; set the ediff to open difference horizontally 
+;; by degfault windows are open vertically
+(custom-set-variables
+ '(ediff-split-window-function (quote split-window-horizontally))
+ '(ediff-highlight-all-diffs t)
+ '(ediff-auto-refine t)
+ 
+)
