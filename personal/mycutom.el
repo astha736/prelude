@@ -6,8 +6,9 @@
 ;; (package-initialize)
 
 ;; multiple-cursors requires cl-lib
-(prelude-require-packages '(elpy jedi cl-lib multiple-cursors sphinx-doc))
+(prelude-require-packages '(elpy jedi cl-lib multiple-cursors sphinx-doc flymd))
 (require 'multiple-cursors)
+(require 'flymd)
 
 (elpy-enable)
 (setq elpy-rpc-backend "jedi")
@@ -39,5 +40,8 @@
  '(ediff-split-window-function (quote split-window-horizontally))
  '(ediff-highlight-all-diffs t)
  '(ediff-auto-refine t)
- 
 )
+
+(add-hook 'markdown-mode-hook 'flyspell-mode)
+
+
