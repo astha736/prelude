@@ -4,6 +4,7 @@
 (setq mc/cmds-to-run-for-all
       '(
         org-self-insert-command
+        sp-backward-delete-char
         ))
 
 (setq mc/cmds-to-run-once
