@@ -10,6 +10,7 @@
       '(
         ibuffer
         ignore
+        indent-rigidly
         ivy-mouse-done
         mouse-set-region
         multiple-cursors-mode
